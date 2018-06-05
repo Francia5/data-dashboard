@@ -167,7 +167,7 @@ blockquote cite:before {
 
 /* Inicio de ventana Estudiantes */
 .main-students {
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     width: 60%;
     left: 25%;
     height: 400px;
@@ -190,6 +190,10 @@ blockquote cite:before {
     position: relative;
     text-align: center;
 } */
+
+hr {
+    border: 1px solid black;
+}
 
 /* Fin de ventana Estudiantes */
 
