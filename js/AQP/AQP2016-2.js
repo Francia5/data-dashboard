@@ -27,10 +27,6 @@ for(var i = 0; i < data.AQP['2016-2'].students.length; i++){
         sprintHSE += '<li>' + ("Sprint: " + " : " + (data.AQP["2016-2"].students[i].sprints[j].number) + " = " + (data.AQP["2016-2"].students[i].sprints[j].score.hse)); + '</li>';
     }
     document.getElementById('sprint-hse').innerHTML = sprintHSE;
-
-    // var img = document.getElementById('sprint-hse');
-    // img.appendChild(photo);
-    
 };
 
 // console.log(data);

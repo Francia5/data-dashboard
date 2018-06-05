@@ -5132,19 +5132,69 @@ var data = {
   }
 };
 
+//alumnas inscritas AQP 2016 II (students)
+var studentsInscribed = function students(data) {
+    var studentsNumber = data.students.length;
+    return studentsNumber;
+    console.log(studentsInscribed);
+}
+var totalStudentsAQP20162 = data.AQP["2016-2"];
+totalStudentsAQP20162 = studentsInscribed(totalStudentsAQP20162);
+console.log("cantidad de estudiantes inscritas AQP 2016 II" + " " + "=" + " " + ((totalStudentsAQP20162)));
 
-var dataAQP = 'AQP';      
-var AQP = '2016-2';
 
-function desertionName(base){
-    var dataAQP20162 = data[dataAQP][AQP]['students'];
-    var nameDesertion = [];
+var inscribed = '';
+document.getElementById('chart-aqp2016-2-active-students').innerHTML = inscribed;
 
-for (var i = 0; i < dataAQP20162.length; i++) {
-    if (dataAQP20162[i].active == false){
-        nameDesertion.push("<li>" + dataAQP20162[i].name + "</li>");
+//Alumnas aun activas
+function activeStudentsAQP(data) {
+    var activeStudents = 0;
+    for (var i = 0; i < data.students.length; i++) {
+        if (data.students[i].active == true) {
+            activeStudents++;
+        }
     }
+    return activeStudents;
+};
+// estudiantes activas AQP
+var totalTOTALAQP = data.AQP["2016-2"];
+totalTOTALAQP = activeStudentsAQP(totalTOTALAQP);
+console.log("cantidad de estudiantes activas AQP 2016 II" + " " + "=" + " " + ((totalTOTALAQP)));
+
+
+//Esta inactivas AQP 2016 II
+function dropoutStudents(studentsNumber, activeStudents) { //(inscritas - activas = inactivas)
+    var drops = ((studentsNumber - activeStudents));
+    return drops;
 }
-// console.log(nameDesertion);
-document.getElementById("students-desertion-name-SCL2016").innerHTML = nameDesertion;
-}
+
+var dropoutAQP = dropoutStudents(totalStudentsAQP20162, totalTOTALAQP);
+console.log("cantidad de estudiantes desertoras AQP2016 II" + " " + "=" + " " + (dropoutAQP));
+
+//porcentajes de generacion
+var activePercentage = (totalTOTALAQP*100)/totalStudentsAQP20162;
+console.log(activePercentage);
+var inactivePercentage= (dropoutAQP*100)/totalStudentsAQP20162;
+console.log(inactivePercentage);
+
+//Grafica
+google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Activas '+ parseInt(activePercentage)+ "%", activePercentage],
+      ['Deserciones '+ parseInt(inactivePercentage )+ "%" , inactivePercentage ]
+
+    ]);
+
+    var options = {
+      title: 'Porcentaje de estudiantes ingresadas Arequipa  Generacion 2016-2 '+ totalStudentsAQP20162,
+      pieHole: 0.4,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('chart-aqp2016-2-active-students'));
+    chart.draw(data, options);
+  }
+
+  s

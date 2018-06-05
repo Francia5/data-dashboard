@@ -196,16 +196,3 @@ hr {
 }
 
 /* Fin de ventana Estudiantes */
-
-/* Nav de Estudiantes y Graficas */
-.ul-nav {
-    position: relative;
-    float: right;
-}
-
-.a-nav {
-    text-decoration: none;
-    display: block;
-  }
-
-/* Fin de Estudiantes y Graficas */
