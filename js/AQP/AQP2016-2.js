@@ -1,32 +1,56 @@
 console.log(data);
 
-// Variables globales
-var addList = document.getElementById('main-students');
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// para todas -0
+var nameStudent = '';
+var sprintTECH = '';
+var sprintHSE = '';
+var tmpName = '';
 
-var salida = '';
-for(var i = 0; i < data.SCL['2016-2'].students.length; i++){
-    salida += '<li>' + ("Nombre de Studiante: " + (data.SCL['2016-2'].students[1].name)); + '</li>';
-    break;
+// name
+for(var i = 0; i < data.AQP['2016-2'].students.length; i++){
+    // var photo = document.createElement("img");
+    // photo.src = element.photo;
+    nameStudent += '<li>' + ("Nombre de Studiante: " + (data.AQP['2016-2'].students[i].name)) + '</li>';    
+    // break;
+    document.getElementById('name').innerHTML = nameStudent;
+    tmpName = data.AQP['2016-2'].students[i].name;
+    
+    sprintTECH += '<li>' + ("Tech: ") + '</li>';
+    for(var j = 0; j < data.AQP["2016-2"].students[i].sprints.length; j++){    
+        sprintTECH += '<li>' + ("Sprint: " + " : " + (data.AQP["2016-2"].students[i].sprints[j].number) + " = " + (data.AQP["2016-2"].students[i].sprints[j].score.tech)); + '</li>';
+    }
+
+    document.getElementById('sprint-tech').innerHTML = sprintTECH;
+    sprintHSE += '<li>' + ("Hse: ") + '</li>';
+    for(var j = 0; j < data.AQP["2016-2"].students[i].sprints.length; j++){    
+        sprintHSE += '<li>' + ("Sprint: " + " : " + (data.AQP["2016-2"].students[i].sprints[j].number) + " = " + (data.AQP["2016-2"].students[i].sprints[j].score.hse)); + '</li>';
+    }
+    document.getElementById('sprint-hse').innerHTML = sprintHSE;
+
+    // var img = document.getElementById('sprint-hse');
+    // img.appendChild(photo);
+    
 };
-document.getElementById('Students').innerHTML = salida;
+
+// console.log(data);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//alumnas inscritas SCL 2016 II (students)
+//alumnas inscritas data.AQP['2016-2'] (students)
 var studentsInscribed = function students(data) {
     var studentsNumber = data.students.length;
     return studentsNumber;
 }
-var totalStudents = data.SCL["2016-2"]; // cambiando esta parte de la data data.SCL["2017-2"]; la formula serviría para todas las sedes, no se integraron las demas por falta de tiempo
+var totalStudents = data.AQP['2016-2']; // cambiando esta parte de la data data.AQP['2016-2']; la formula serviría para todas las sedes, no se integraron las demas por falta de tiempo
 totalStudents = studentsInscribed(totalStudents);
-console.log("cantidad de estudiantes inscritas SCL 2016 II" + " " + "=" + " " + ((totalStudents)));
-
-var inscribed = '';
-document.getElementById('students-active').innerHTML = inscribed;
+document.getElementById('students-inscribed-SCL2016').innerHTML = ("Cantidad de estudiantes inscritas AQP 2016 2: " + totalStudents);
+// console.log("Cantidad de estudiantes inscritas AQP 2016 2" + " " + "=" + " " + ((totalStudents)));
 
 // --------------------------------
 
-//alumnas activas SCL2016, cambiando -data.SCL["2017-2"]- sirve para todas las sedes
+//alumnas activas AQP2016, cambiando data.AQP['2016-2'] sirve para todas las sedes
 function activeStudentsSCL(data) {
     var activeS = 0;
     for (var i = 0; i < data.students.length; i++) {
@@ -36,84 +60,161 @@ function activeStudentsSCL(data) {
     }
     return activeS;
 };
-// alumanas activas SCL
-var totalTOTALSCL = data.SCL["2016-2"];
+// alumanas activas AQP
+var totalTOTALSCL = data.AQP['2016-2'];
 totalTOTALSCL = activeStudentsSCL(totalTOTALSCL);
-document.getElementById('students-active').innerHTML = totalTOTALSCL;
-console.log("cantidad de estudiantes activas SCL 2016 II" + " " + "=" + " " + ((totalTOTALSCL)));
+document.getElementById('students-active-SCL2016').innerHTML = ("Cantidad de estudiantes activas AQP 2016 2 AQP 2016 2: " + totalTOTALSCL);
+// console.log("Cantidad de estudiantes activas AQP 2016 2" + " " + "=" + " " + ((totalTOTALSCL)));
 
 // --------------------------------
 
 //alumnas inactivas SCL 2016 II  
+// function dropoutStu(studentsnumber, activeS) { //(inscritas - activas = inactivas)
+//     var drops = ((studentsnumber - activeS)); 
+//     return drops;
+// }
+
+// var dropoutSCL = dropoutStu(totalStudents, totalTOTALSCL);
+// document.getElementById('students-desertion-SCL2016').innerHTML = ("Cantidad de estudiantes desertoras AQP 2016 2: " + dropoutSCL);
+// // console.log("Cantidad de estudiantes desertoras AQP 2016 2" + " " + "=" + " " + (dropoutSCL)); 
+
+// // --------------------------------
+
+// // % de deserción
+// var dropPercent = Math.round((dropoutSCL / totalStudents) * 100);
+// document.getElementById('students-desertion-Percentage-SCL2016').innerHTML = ("Porcentaje de estudiantes desertoras AQP 2016 2: " + "=" + " %" + " " + (Math.round((dropoutSCL / totalStudents) * 100)));
+// console.log("Porcentaje de estudiantes desertoras AQP 2016 2" + " " + "=" + " %" + " " + (Math.round((dropoutSCL / totalStudents) * 100)));
+
+// function desertionName(base){
+//     var dataAQP20162 = data[dataAQP][AQP]['students'];
+//     var nameDesertion = [];
+
+// for (var i = 0; i < dataAQP20162.length; i++) {
+//     if (dataAQP20162[i].active == false){
+//         nameDesertion.push("<li>" + dataAQP20162[i].name + "</li>");
+//     }
+// }
+// // console.log(nameDesertion);
+// document.getElementById("students-desertion-name-SCL2016").innerHTML = nameDesertion;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// --------------------------------
+
+//alumnas inactivas SCL 2016 II 
 function dropoutStu(studentsnumber, activeS) { //(inscritas - activas = inactivas)
     var drops = ((studentsnumber - activeS)); 
     return drops;
 }
 
-var dropoutSCL = dropoutStu(totalStudents, totalTOTALSCL);
-console.log("cantidad de estudiantes desertoras SCL 2016 II" + " " + "=" + " " + (dropoutSCL)); 
-
-// --------------------------------
-
 // % de deserción
-var dropPercent = Math.round((dropoutSCL / totalStudents) * 100);
-console.log("porcentaje de estudiantes desertoras SCL 2016 II" + " " + "=" + " %" + " " + (Math.round((dropoutSCL / totalStudents) * 100)));
+var deserter= '';
+var dropoutSCL = dropoutStu(totalStudents, totalTOTALSCL);
+document.getElementById('students-desertion-SCL2016').innerHTML = ("Cantidad de estudiantes desertoras AQP 2016 2: " + dropoutSCL);
 
+for(var i = 0; i < data.AQP['2016-2'].students.length; i++){
+    if(data.AQP["2016-2"].students[i].active == false){
+        deserter += '<li>' + (data.AQP['2016-2'].students[i].name) + '</li>';
+    }
+    
+};
+// pintar los nombres de las desertoras
+document.getElementById('students-desertion-Percentage-SCL2016').innerHTML = deserter;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// reutilizo parte del codigo de la deserción
+function dropoutStu(studentsnumber, activeS) { //(inscritas - activas = inactivas)
+    var drops = ((studentsnumber - activeS)); 
+    return drops;
+}
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+// % activas
+var actives= '';
+var dropoutSCL = dropoutStu(totalStudents, totalTOTALSCL);
+document.getElementById('students-desertion-SCL2016').innerHTML = ("Cantidad de estudiantes desertoras AQP 2016 2: " + dropoutSCL);
 
-// activas   true false
-// var cede = 'SCL';
-// var generacion = '2016-2';
+for(var i = 0; i < data.AQP['2016-2'].students.length; i++){
+    if(data.AQP["2016-2"].students[i].active == true){
+        actives += '<li>' + (data.AQP['2016-2'].students[i].name) + '</li>';
+    }
+    
+};
+// pintar los nombres de las activas
+document.getElementById('name-list-of-active-students').innerHTML = actives;
 
-// function activasSCL(base){
-//     var structura = data[cede][generacion].students;
-//     var activasStudents = [];
-//     for (var i = 0; i <structura.length; i++){
-//         if(activasStudents[i].active == true){
-//             activasStudents.push(structura[i]);
-//         }
-//     }
-//     return activasStudents;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// calificaciones tech y hse
+// var tech = '';
+// var hse = '';
+// for(var j = 0; j < data.AQP["2016-2"].students[i].sprints.length; j++){    
+//     tech += '<li>' + ("Sprint: " + " : " + (data.AQP["2016-2"].students[i].sprints[j].number) + " = " + (data.AQP["2016-2"].students[i].sprints[j].score.tech)); + '</li>';
 // }
-// activasSCL(data);
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// var active = [];
-// for(var i = 0; i < data.SCL['2016-2'].students.length; i++){
-//     if (data.SCL['2016-2'] === true){
-//         active += '<li>' + ("Studiante Activas: " + (data.SCL['2016-2'].students.active)); + '</li>';
-//         // break;
-//     }
-//     document.getElementById('students-active').innerHTML = active;
-// };
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// function activeStudents(data){
-//     var activeSCL = 0;
-//     for (var i = 0; i < data.students.length; i++) {
-//         if (data.students[i].active == true) {
-//             activeSCL++;
-//         }
-//     }
-//     return activeSCL;
-// };
-// var activeTotal = data.AQP['2016-2'];
-// activeTotal = activeStudents(activeTotal);
-
-// var active = '';
-// for(var i = 0; i < data.AQP['2016-2'].students.length; i++){
-//     if(data.AQP['2016-2'].students === true){
-//         active += '<li>' + ("Estudiantes activas " + "=" + " " + (data.AQP['2016-2'].students[i].active)); + '</li>';
-//         document.getElementById('students-active').innerHTML = active;
-//     }    
-
-// };
-// document.getElementById('students-active').innerHTML = active;
-// // console.log("Estudiantes activas " + "=" + " " + (activeTotal));
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// document.getElementById('activeTECH').innerHTML = tech;
 
 
+// for(var j = 0; j < data.AQP["2016-2"].students[i].sprints.length; j++){    
+//     hse += '<li>' + ("Sprint: " + " : " + (data.AQP["2016-2"].students[i].sprints[j].number) + " = " + (data.AQP["2016-2"].students[i].sprints[j].score.hse)); + '</li>';
+//     // break;    
+// }
+// document.getElementById('activeHSE').innerHTML = hse;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// Cantidad y porcentaje de estudiantes exitosas (superan la meta del 70% y siguen activas)
+//alumnas inscritas data.AQP['2016-2'] (students)
+var studentsInscribed = function students(data) {
+    var studentsNumber = data.AQP["2016-2"].students.length;
+    return studentsNumber;
+}
+var totalStudents = studentsInscribed;
+var quantity = 0;   // cantidad 
+var points = 0;
+var studentsPorcentage = 0;   // % de estudiantes
+
+//1800 tech
+//1200 HSE
+//2100
+
+//12000
+//8400
+
+for(var i = 0; i < data.AQP['2016-2'].students.length; i++){
+
+    if(data.AQP["2016-2"].students[i].active == true){
+        for(var j = 0; j < data.AQP["2016-2"].students[i].sprints.length; j++){    
+                points += data.AQP["2016-2"].students[i].sprints[j].score.tech;
+                points += data.AQP["2016-2"].students[i].sprints[j].score.hse;
+        }
+        if(points >= 8400){
+            quantity++;
+        }
+        points = 0;
+    }
+
+    studentsPorcentage = (quantity*100)/totalStudents;
+};
+
+document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
+document.getElementById('quantityStudents').innerHTML = quantity;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// El % de estudiantes satisfechas (cumple + supera)
+/////El % de estudiantes satisfechas (cumple + supera)
+var satisfied = 0;   // cumple + supera
+var satisfied1 = 0;
+var satisfied2 = 0;
+var satisfied3 = 0;
+var text = '';       // para guardar el resultado
+var text1 = '';
+var text2 = '';
+var text3 = '';
+
+// 1
+for(var i = 0; i < data.AQP['2016-2'].ratings.length; i++){
+    satisfied = data.AQP["2016-2"].ratings[i].student.cumple + data.AQP["2016-2"].ratings[i].student.supera;
+    text = "El porcentaje de estudiantes satisfechas en el Sprint " +  " fue de " + satisfied;
+};
+document.getElementById('Text').innerHTML = text;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////

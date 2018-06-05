@@ -63,7 +63,7 @@ header img {
 
 /* Inicio Estilos de la Barra de Navegacion Fija */
 
-nav {
+.nav-bar {
     width: 8%;
     height: 595px;
     background-color:  rgb(249, 246, 237);
@@ -165,8 +165,9 @@ blockquote cite:before {
 
 /* Fin de Seccion Home */
 
+/* Inicio de ventana Estudiantes */
 .main-students {
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
     width: 60%;
     left: 25%;
     height: 400px;
@@ -190,4 +191,21 @@ blockquote cite:before {
     text-align: center;
 } */
 
+hr {
+    border: 1px solid black;
+}
+
 /* Fin de ventana Estudiantes */
+
+/* Nav de Estudiantes y Graficas */
+.ul-nav {
+    position: relative;
+    float: right;
+}
+
+.a-nav {
+    text-decoration: none;
+    display: block;
+  }
+
+/* Fin de Estudiantes y Graficas */
