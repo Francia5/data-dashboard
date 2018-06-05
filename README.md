@@ -7,7 +7,7 @@
 
 ***
 
-## Resumen de proyecto 
+## Resumen de proyecto
 
 
 Creación de herramienta web que ayude a las Training Managers de Laboratoria a optimizar sus tiempos mediante la búsqueda rápida y ágil de los siguientes aspectos:
@@ -46,11 +46,11 @@ Creación de herramienta web que ayude a las Training Managers de Laboratoria a 
 
 ***
 
-### Procesos de Investigación 
+### Procesos de Investigación
 
 #### Investigación y empatía.
 
-        EMPRESA : Laboratoria 
+        EMPRESA : Laboratoria
         LEMA : "Talento que transforma"
         MISION : Talento tech femenino de Latinoamérica para el mundo
 
@@ -69,15 +69,15 @@ Creación de herramienta web que ayude a las Training Managers de Laboratoria a 
 
     - La frecuencia de uso de la herramienta para las TM es diario
 
-    - La pagina web requiere ser simple en el diseño e intuitiva. 
+    - La pagina web requiere ser simple en el diseño e intuitiva.
 
     - EXTRA : agregar notas, seccion de HSE, mostrar graficas de la evolucion de las alumnas por generacion durante el proceso del bootcamp por quiz, por retos de codigo, trabajo en equipo, y todas las areas a evaluar para asi detectar las areas de oportunidad para los jedi.
 
     DEFINICION
 
-    - Consideramos  que debido a la falta de tiempo y organizacion no se ha podido contar con una herramienta que conjugue la informacion de todas las partes involucradas y gracias a la necesidad y a la demanda de mas sedes y por ende mas alumnas ha sido forzoso obtener una herramienta que pueda solucionar la problematica para cada una de las areas como son las TM en primer caso, los jedi y los coach. 
+    - Consideramos  que debido a la falta de tiempo y organizacion no se ha podido contar con una herramienta que conjugue la informacion de todas las partes involucradas y gracias a la necesidad y a la demanda de mas sedes y por ende mas alumnas ha sido forzoso obtener una herramienta que pueda solucionar la problematica para cada una de las areas como son las TM en primer caso, los jedi y los coach.
 
-    
+
     BRAINSTORMING (Ideacion) DE LA PROBLEMATICA
 
     - Pagina Intuitiva con diseños simple
@@ -162,5 +162,35 @@ Estadisticas
 ***
 
 ### Herramientas
+-Taskade
+-Scrum
+-Pencil para mockups
+-Charts.js
+-Google charts
 
+### UPTADES
+####SCRUM
+![Scrum Main](assets\mockups\6.jpg)
+![Scrum students](assets\mockups\7.jpg)
+![Estadisticas](assets\mockups\8.jpg)
+![Readme Cambios](assets\mockups\9.jpg)
+![Lista de Tareas](assets\mockups\5.jpg)
+![Extras 1](assets\mockups\5.jpg)
+![Extras 2](assets\mockups\10 extra.jpg)
+####Mockups
+![Main](assets\mockups\main.png)
+![Estudiantes](assets\mockups\alumnas_pagina_principal.png)
+![Coach](assets\mockups\coach.png)
+![Estadisticas](assets\mockups\estadisticas_principal.png)
+![Sidebar](assets\mockups\alumnas_sidebar.png)
 
+##Como se manejo el proyecto?
+
+Para una mejor organizacion, se organizo el proyecto por medio de scrum, separando Tareas
+y haciendo tareas mas sencillas para un mejor alcance de la misma, se tuvieron algunos
+conflictos con el Git, sin embargo, se solucionaron poco a poco, aun que eso tomo mucho tiempos
+y recursos.
+
+A nivel tecnico , nos manejamos  por medio de ramas en Github, teniendo cada una su propia rama para
+poder modificar el producto de manera independiente y hacer un mejor merge ya teniendo las cosas separadas
+esperando crear los menos conflictos en la misma a la hora del merge.
