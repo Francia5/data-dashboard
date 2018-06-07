@@ -2,7 +2,7 @@ body{
     box-sizing: content-box;
     margin: 0;
     padding: 0;
-    
+
 }
 /* Inicia Estilos del Header */
 header {
@@ -11,7 +11,7 @@ header {
     height: 40px;
     background-color: rgb(249, 246, 237);
 
-    
+
 }
 
 header img {
@@ -28,7 +28,7 @@ header img {
     width: 30%;
     display: inline-block;
     height: 40px;
-    float: right; 
+    float: right;
 }
 
 .header-search input {
@@ -42,7 +42,7 @@ header img {
     left: 88px;
     top: 6px;
     opacity: 0.6;
-    transform: rotateY(180deg);  
+    transform: rotateY(180deg);
 }
 
 .header-logo {
@@ -142,3 +142,16 @@ footer {
 }
 
 /* Fin de ventana Estudiantes */
+
+/*Inicio chart*/
+main{
+  display: inline-block;
+  position: relative;
+  left: 250px;
+  bottom: 33em;
+  width: 80%;
+}
+hr{
+  height: 2px;
+  color: black;
+}
