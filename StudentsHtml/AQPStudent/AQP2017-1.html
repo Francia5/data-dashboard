@@ -18,126 +18,149 @@
     </div>
     <div class="header-search">
       <input>
-      <i><i class="fas fa-search"></i></i>
+      <i>
+          <i class="fas fa-search"></i>
+      </i>
     </div>
     <div class="header-line-style">
     </div>
-
-    <!-- Inicio de Barra de Navegacion fija -->
-    <nav>
-      <ul>
-        <li class="container-nav" id="home-btn">
-          <a href="index.html"><img src="../../assets/icons/home.svg" alt="Home"></a>
-        </li>
-        <li class="container-nav" id="students-btn">
-          <img src="../../assets/icons/estudents.svg" alt="Students">
-          <ul>
-            <li class="main-sedesList">AQP</li>
-            <ul>
-              <li><a href="StudentsHtml\AQPStudent\AQP2016-2.html">AQP2016-2</a></li>
-              <li><a href="StudentsHtml\AQPStudent\AQP2017-1.html">AQP2017-1</a></li>
-            </ul>
-            <li class="main-sedesList">CDMX</li>
-            <ul>
-              <li><a href="StudentsHtml\CDMXStudent\CDMX2017-1.html">CDMX2017-1</a></li>
-              <li><a href="StudentsHtml\CDMXStudent\CDMX2017-2.html">CDMX2017-2</a></li>
-            </ul>
-            <li class="main-sedesList">LIM</li>
-            <ul>
-              <li><a href="StudentsHtml\LIMstudent\LIM2016-2.html">LIM2016-2</a></li>
-              <li><a href="StudentsHtml\LIMstudent\LIM2017-1.html">LIM2017-1</a></li>
-            </ul>
-            <li class="main-sedesList">SCL</li>
-            <ul>
-              <li><a href="StudentsHtml\SCLStudent\SCL2016-2.html">SCL2016-2</a></li>
-              <li><a href="StudentsHtml\SCLStudent\SCL2017-1.html">SCL2017-1</a></li>
-              <li><a href="StudentsHtml\SCLStudent\SCL2017-2.html">SCL2017-2</a></li>
-            </ul>
-          </ul>
-        </li>
-        <li class="container-nav" id="coach-btn">
-          <a href="coach.html"><img src="../../assets/icons/coach.png" alt="Coach"></a>
-        </li>
-        <li class="container-nav" id="chart-btn">
-          <a href="chart.html"><img src="../../assets/icons/chart.svg" alt="Chart"></a>
-        </li>
-      </ul>
-    </nav>
   </header>
-  <!-- Fin de barra de Navegacion -->
 
+  <!-- Inicio de Barra de Navegacion fija -->
+  <nav>
+    <ul>
+      <li class="container-nav" id="home-btn">
+        <a href="../../index.html">
+            <img src="../../assets/icons/home.svg" alt="Home">
+          </a>
+      </li>
+      <li class="container-nav" id="students-btn">
+        <img src="../../assets/icons/estudents.svg" alt="Students">
+        <ul class="main-sedes-container">
+          <li class="main-sedes-list">AQP</li>
+          <li class="main-sedes-list">CDMX</li>
+          <li class="main-sedes-list">LIM</li>
+          <li class="main-sedes-list">SCL</li>
+        </ul>
+      </li>
+      <div class="main-container-generations">
+        <ul class="main-sede-AQP-container, main-sedes-container">
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\AQPStudent\AQP2016-2.html">AQP2016-2</a>
+          </li>
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\AQPStudent\AQP2017-1.html">AQP2017-1</a>
+          </li>
+        </ul>
+        <ul class="main-sede-CDMX-container, main-sedes-container">
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\CDMXstudent\CDMX2017-1.html">CDMX2017-1</a>
+          </li>
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\CDMXStudent\CDMX2017-2.html">CDMX2017-2</a>
+          </li>
+        </ul>
+        <ul class="main-sede-LIM-container, main-sedes-container">
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\LIMstudent\LIM2016-2.html">LIM2016-2</a>
+          </li>
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\LIMstudent\LIM2017-1.html">LIM2017-1</a>
+          </li>
+        </ul>
+        <ul class="main-sede-SCL-container, main-sedes-container">
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\SCLStudent\SCL2016-2.html">SCL2016-2</a>
+          </li>
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\SCLStudent\SCL2017-1.html">SCL2017-1</a>
+          </li>
+          <li class="main-sedes-list">
+            <a href="../../StudentsHtml\SCLStudent\SCL2017-2.html">SCL2017-2</a>
+          </li>
+        </ul>
+      </div>
+      <li class="container-nav" id="coach-btn">
+        <a href="../../views/coach.html">
+            <img src="../../assets/icons/coach.png" alt="Coach">
+          </a>
+      </li>
+      <li class="container-nav" id="chart-btn">
+        <a href="../../views/chart.html">
+            <img src="../../assets/icons/chart.svg" alt="Chart">
+          </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Fin de barra de Navegacion -->
 
   <!-- Inicio Seccion Students -->
   <main>
-
     <section class="main-students">
-      <section>
-        <ul id="students-inscribed-SCL2016"></ul>
-        <hr>
-        <ul id="students-active-SCL2016"></ul>
-        <hr>
-        <ul id="students-desertion-SCL2016"></ul>
-        <hr>
-        <p>Desersión nombres</p>
-        <ul id="students-desertion-Percentage-SCL2016"></ul>
-        <hr>
-        <p>Activas nombres</p>
-        <ul id="name-list-of-active-students"></ul>
-        <hr>
+      <h1>AQP2017-1</h1>
+      <section class="grid-container">
+        <!-- <section class="grid-container"> -->
+        <ul class="grid-container" id="students-inscribed-SCL2016"></ul>
+        <!-- <hr> -->
+        <ul class="grid-container" id="students-active-SCL2016"></ul>
+        <!-- <hr> -->
+        <ul class="grid-container" id="students-desertion-SCL2016"></ul>
+        <!-- <hr> -->
+        <section class="grid-container">
+          <section>
+            <p class="grid-container">Desersión nombres</p>
+            <ul class="grid-item" id="students-desertion-Percentage-SCL2016"></ul>
+          </section>
+          <!-- <hr> -->
+          <section>
+            <p class="grid-container">Activas nombres</p>
+            <ul class="grid-item" id="name-list-of-active-students"></ul>
+          </section>
+          <!-- <hr> -->
+        </section>
       </section>
 
-      <section>
+      <section class="grid-container">
         <p>Cantidad y porcentaje de estudiantes exitosas (superan la meta del 70% y siguen activas)</p>
         <ul id="percentageStudents"></ul>
         <ul id="quantityStudents"></ul>
-        <hr>
+        <!-- <hr> -->
         <ul id="Text"></ul>
-        <ul id="Text1"></ul>
-        <ul id="Text2"></ul>
-        <ul id="Text3"></ul>
-        <hr>
+        <!-- <hr> -->
       </section>
 
-
-      <section id="good">
+      <!-- <section > -->
+      <section class="grid-container">
         <img class="avatar" src="../../assets/images/avatar.png" alt="student">
         <ul id="name"></ul>
         <ul id="sprint-tech"></ul>
         <ul id="sprint-hse"></ul>
+        <span class="span1">miau</span>
         <hr>
       </section>
-
-    </section>
-
-    <!-- Inicio de ventana por Estudiante -->
-    <section id="main-window-student">
-      <ul id="chart"></ul>
-      <ul id="inscribed"></ul>
-
-    </section>
   </main>
-  <!-- Fin Seccion Students -->
+  <!-- termina Students -->
 
   <!-- Inicio footer -->
   <footer>
     <section class="footer">
       <ul class="">
-        <li class="f-laboratoria">
+        <li class="f-laboratoria facebook">
           <a href="http://www.laboratoria.la/"><i class="fab fa-facebook-f"></i></a>
         </li>
-        <li class="f-chile">
+        <li class="f-chile facebook">
           <a href="http://www.laboratoria.la/"><i class="fab fa-facebook-f"></i></a>
         </li>
-        <li class="f-peru">
+        <li class="f-peru facebook">
           <a href="http://www.laboratoria.la/"><i class="fab fa-facebook-f"></i></a>
         </li>
-        <li class="f-sao">
+        <li class="f-sao facebook">
           <a href="http://www.laboratoria.la/"><i class="fab fa-facebook-f"></i></a>
         </li>
-        <li class="f-cdmx">
+        <li class="f-cdmx facebook">
           <a href="http://www.laboratoria.la/"><i class="fab fa-facebook-f"></i></a>
         </li>
-        <li class="f-gdl">
+        <li class="f-gdl facebook">
           <a href="http://www.laboratoria.la/"><i class="fab fa-facebook-f"></i></a>
         </li>
       </ul>
@@ -148,6 +171,7 @@
       <p>Copyright © Your Website 2017</p>
     </section>
   </footer>
+
   <!-- Fin Footer -->
 
   <!-- Base de datos -->

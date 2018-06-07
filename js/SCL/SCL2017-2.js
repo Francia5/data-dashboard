@@ -17,7 +17,7 @@ for(var i = 0; i < data.SCL['2017-2'].students.length; i++){
     tmpName = data.SCL['2017-2'].students[i].name;
     
     sprintTECH += '<li>' + ("Tech: ") + '</li>';
-    for(var j = 0; j < data.SCL['2017-2'].students[i].sprints.length; j++){    
+    for(var j = 0; j < data.SCL['2017-2'].students[i].sprints.length; j++){     
         sprintTECH += '<li>' + ("Sprint: " + " : " + (data.SCL['2017-2'].students[i].sprints[j].number) + " = " + (data.SCL['2017-2'].students[i].sprints[j].score.tech)); + '</li>';
     }
 
@@ -27,9 +27,6 @@ for(var i = 0; i < data.SCL['2017-2'].students.length; i++){
         sprintHSE += '<li>' + ("Sprint: " + " : " + (data.SCL['2017-2'].students[i].sprints[j].number) + " = " + (data.SCL['2017-2'].students[i].sprints[j].score.hse)); + '</li>';
     }
     document.getElementById('sprint-hse').innerHTML = sprintHSE;
-
-    // var img = document.getElementById('sprint-hse');
-    // img.appendChild(photo);
     
 };
 
@@ -157,30 +154,30 @@ for(var i = 0; i < data.SCL['2017-2'].students.length; i++){
         }
         points = 0;
     }
-
-    studentsPorcentage = (quantity*100)/totalStudents;
+    console.log("Va en el alumno " + (i + 1) + " Y quantity va en " + quantity);
+    studentsPorcentage = (quantity * 100) / totalStudents;
+    console.log(studentsPorcentage);
 };
 
-document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
-document.getElementById('quantityStudents').innerHTML = quantity;
+if (isNaN(studentsPorcentage)) {
+    studentsPorcentage = "No hubo Estudiantes arriba del 70%";
+    document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
+} else {
+    document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
+    document.getElementById('quantityStudents').innerHTML = quantity;
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // El % de estudiantes satisfechas (cumple + supera)
 /////El % de estudiantes satisfechas (cumple + supera)
 var satisfied = 0;   // cumple + supera
-var satisfied1 = 0;
-var satisfied2 = 0;
-var satisfied3 = 0;
 var text = '';       // para guardar el resultado
-var text1 = '';
-var text2 = '';
-var text3 = '';
 
 // 1
 for(var i = 0; i < data.SCL['2017-2'].ratings.length; i++){
     satisfied = data.SCL['2017-2'].ratings[i].student.cumple + data.SCL['2017-2'].ratings[i].student.supera;
-    text = "El porcentaje de estudiantes satisfechas en el Sprint " + 1 + " fue de " + satisfied;
+    text = "El porcentaje de estudiantes satisfechas en el Sprint " + 1 + " fue de %" + satisfied;
 };
 document.getElementById('Text').innerHTML = text;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -8,29 +8,29 @@ var sprintHSE = '';
 var tmpName = '';
 
 // name
-for(var i = 0; i < data.CDMX['2017-2'].students.length; i++){
+for (var i = 0; i < data.CDMX['2017-2'].students.length; i++) {
     // var photo = document.createElement("img");
     // photo.src = element.photo;
-    nameStudent += '<li>' + ("Nombre de Studiante: " + (data.CDMX['2017-2'].students[i].name)) + '</li>';    
+    nameStudent += '<li>' + ("Nombre de Studiante: " + (data.CDMX['2017-2'].students[i].name)) + '</li>';
     // break;
     document.getElementById('name').innerHTML = nameStudent;
     tmpName = data.CDMX['2017-2'].students[i].name;
-    
+
     sprintTECH += '<li>' + ("Tech: ") + '</li>';
-    for(var j = 0; j < data.CDMX['2017-2'].students[i].sprints.length; j++){    
+    for (var j = 0; j < data.CDMX['2017-2'].students[i].sprints.length; j++) {
         sprintTECH += '<li>' + ("Sprint: " + " : " + (data.CDMX['2017-2'].students[i].sprints[j].number) + " = " + (data.CDMX['2017-2'].students[i].sprints[j].score.tech)); + '</li>';
     }
 
     document.getElementById('sprint-tech').innerHTML = sprintTECH;
     sprintHSE += '<li>' + ("Hse: ") + '</li>';
-    for(var j = 0; j < data.CDMX['2017-2'].students[i].sprints.length; j++){    
+    for (var j = 0; j < data.CDMX['2017-2'].students[i].sprints.length; j++) {
         sprintHSE += '<li>' + ("Sprint: " + " : " + (data.CDMX['2017-2'].students[i].sprints[j].number) + " = " + (data.CDMX['2017-2'].students[i].sprints[j].score.hse)); + '</li>';
     }
     document.getElementById('sprint-hse').innerHTML = sprintHSE;
 
     // var img = document.getElementById('sprint-hse');
     // img.appendChild(photo);
-    
+
 };
 
 // console.log(data);
@@ -105,40 +105,40 @@ document.getElementById('students-active-SCL2016').innerHTML = ("Cantidad de est
 
 //alumnas inactivas SCL 2016 II 
 function dropoutStu(studentsnumber, activeS) { //(inscritas - activas = inactivas)
-    var drops = ((studentsnumber - activeS)); 
+    var drops = ((studentsnumber - activeS));
     return drops;
 }
 
 // % de deserción
-var deserter= '';
+var deserter = '';
 var dropoutSCL = dropoutStu(totalStudents, totalTOTALSCL);
 document.getElementById('students-desertion-SCL2016').innerHTML = ("Cantidad de estudiantes desertoras CDMX 2017 2: " + dropoutSCL);
 
-for(var i = 0; i < data.CDMX['2017-2'].students.length; i++){
-    if(data.CDMX['2017-2'].students[i].active == false){
+for (var i = 0; i < data.CDMX['2017-2'].students.length; i++) {
+    if (data.CDMX['2017-2'].students[i].active == false) {
         deserter += '<li>' + (data.CDMX['2017-2'].students[i].name) + '</li>';
     }
-    
+
 };
 // pintar los nombres de las desertoras
 document.getElementById('students-desertion-Percentage-SCL2016').innerHTML = deserter;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 // reutilizo parte del codigo de la deserción
 function dropoutStu(studentsnumber, activeS) { //(inscritas - activas = inactivas)
-    var drops = ((studentsnumber - activeS)); 
+    var drops = ((studentsnumber - activeS));
     return drops;
 }
 
 // % activas
-var actives= '';
+var actives = '';
 var dropoutSCL = dropoutStu(totalStudents, totalTOTALSCL);
 document.getElementById('students-desertion-SCL2016').innerHTML = ("Cantidad de estudiantes desertoras CDMX 2017 2: " + dropoutSCL);
 
-for(var i = 0; i < data.CDMX['2017-2'].students.length; i++){
-    if(data.CDMX['2017-2'].students[i].active == true){
+for (var i = 0; i < data.CDMX['2017-2'].students.length; i++) {
+    if (data.CDMX['2017-2'].students[i].active == true) {
         actives += '<li>' + (data.CDMX['2017-2'].students[i].name) + '</li>';
     }
-    
+
 };
 // pintar los nombres de las activas
 document.getElementById('name-list-of-active-students').innerHTML = actives;
@@ -179,61 +179,43 @@ var studentsPorcentage = 0;   // % de estudiantes
 //12000
 //8400
 
-for(var i = 0; i < data.CDMX['2017-2'].students.length; i++){
+for (var i = 0; i < data.CDMX['2017-2'].students.length; i++) {
 
-    if(data.CDMX['2017-2'].students[i].active == true){
-        for(var j = 0; j < data.CDMX['2017-2'].students[i].sprints.length; j++){    
-                points += data.CDMX['2017-2'].students[i].sprints[j].score.tech;
-                points += data.CDMX['2017-2'].students[i].sprints[j].score.hse;
+    if (data.CDMX['2017-2'].students[i].active == true) {
+        for (var j = 0; j < data.CDMX['2017-2'].students[i].sprints.length; j++) {
+            points += data.CDMX['2017-2'].students[i].sprints[j].score.tech;
+            points += data.CDMX['2017-2'].students[i].sprints[j].score.hse;
         }
-        if(points >= 8400){
+        if (points >= 8400) {
             quantity++;
         }
         points = 0;
     }
-
-    studentsPorcentage = (quantity*100)/totalStudents;
+    console.log("Va en el alumno " + (i + 1) + " Y quantity va en " + quantity);
+    studentsPorcentage = (quantity * 100) / totalStudents;
+    console.log(studentsPorcentage);
 };
 
-document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
-document.getElementById('quantityStudents').innerHTML = quantity;
+if (isNaN(studentsPorcentage)) {
+    studentsPorcentage = "No hubo Estudiantes arriba del 70%";
+    document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
+} else {
+    document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
+    document.getElementById('quantityStudents').innerHTML = quantity;
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // El % de estudiantes satisfechas (cumple + supera)
 /////El % de estudiantes satisfechas (cumple + supera)
 var satisfied = 0;   // cumple + supera
-var satisfied1 = 0;
-var satisfied2 = 0;
-var satisfied3 = 0;
 var text = '';       // para guardar el resultado
-var text1 = '';
-var text2 = '';
-var text3 = '';
 
 // 1
-for(var i = 0; i < data.CDMX['2017-2'].ratings.length; i++){
+for (var i = 0; i < data.CDMX['2017-2'].ratings.length; i++) {
     satisfied = data.CDMX['2017-2'].ratings[i].student.cumple + data.CDMX['2017-2'].ratings[i].student.supera;
-    text = "El porcentaje de estudiantes satisfechas en el Sprint " + 1 + " fue de " + satisfied;
+    text = "El porcentaje de estudiantes satisfechas en el Sprint " + 1 + " fue de %" + satisfied;
 };
 document.getElementById('Text').innerHTML = text;
-// 2
-for(var i = 0; i < data.CDMX['2017-2'].ratings.length; i++){
-    satisfied = data.CDMX['2017-2'].ratings[1].student.cumple + data.CDMX['2017-2'].ratings[1].student.supera;
-    text1 = "El porcentaje de estudiantes satisfechas en el Sprint " + 2 + " fue de " + satisfied1;
-};
-document.getElementById('Text1').innerHTML = text1;
-// 3
-for(var i = 0; i < data.CDMX['2017-2'].ratings.length; i++){
-    satisfied = data.CDMX['2017-2'].ratings[2].student.cumple + data.CDMX['2017-2'].ratings[2].student.supera;
-    text2 = "El porcentaje de estudiantes satisfechas en el Sprint " + 3 + " fue de " + satisfied2;
-};
-document.getElementById('Text2').innerHTML = text2;
-// 4
-for(var i = 0; i < data.CDMX['2017-2'].ratings.length; i++){
-    satisfied = data.CDMX['2017-2'].ratings[3].student.cumple + data.CDMX['2017-2'].ratings[3].student.supera;
-    text3 = "El porcentaje de estudiantes satisfechas en el Sprint " + 4 + " fue de " + satisfied3;
-};
-document.getElementById('Text3').innerHTML = text3;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 

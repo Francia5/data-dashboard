@@ -157,12 +157,18 @@ for(var i = 0; i < data.CDMX['2017-1'].students.length; i++){
         }
         points = 0;
     }
-
-    studentsPorcentage = (quantity*100)/totalStudents;
+    console.log("Va en el alumno " + (i + 1) + " Y quantity va en " + quantity);
+    studentsPorcentage = (quantity * 100) / totalStudents;
+    console.log(studentsPorcentage);
 };
 
-document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
-document.getElementById('quantityStudents').innerHTML = quantity;
+if (isNaN(studentsPorcentage)) {
+    studentsPorcentage = "No hubo Estudiantes arriba del 70%";
+    document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
+} else {
+    document.getElementById('percentageStudents').innerHTML = studentsPorcentage;
+    document.getElementById('quantityStudents').innerHTML = quantity;
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -180,7 +186,7 @@ var text3 = '';
 // 1
 for(var i = 0; i < data.CDMX['2017-1'].ratings.length; i++){
     satisfied = data.CDMX['2017-1'].ratings[i].student.cumple + data.CDMX['2017-1'].ratings[i].student.supera;
-    text = "El porcentaje de estudiantes satisfechas en el Sprint " +  " fue de " + satisfied;
+    text = "El porcentaje de estudiantes satisfechas en el Sprint " +  " fue de %" + satisfied;
 };
 document.getElementById('Text').innerHTML = text;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -79,15 +79,26 @@ li img {
     position: relative;
     width: 90px;
     height: 90px;
-    margin: 25px;
+    margin: 5px;
     top: 20px;
-    right: 15px;
+    right: 40px;
     opacity: 0.6;
+
 }
 
 li, a {
     text-decoration: none;
     list-style: none;
+}
+
+#coach-btn, #coach-btn img {
+    bottom: 110px;
+    position: relative;
+}
+
+#students-btn {
+    top: 30px;
+    position: relative;
 }
 
 /* .container-nav {
@@ -170,12 +181,7 @@ footer {
     position: relative;
     left: 100px;
 }
-.main-sede-CDMX-container {
-}
-main-sede-LIM-container {
-}
-main-sede-SCL-container {
-}
+
 .main-container-generations {
     position: relative;
     width: 100%;
@@ -184,3 +190,38 @@ main-sede-SCL-container {
 }
 
 /* Termina coach */
+
+#bar-chart {
+    width: 600px;
+    height: 700px;
+    position: relative;
+    left: 400px;
+    bottom: 750px;
+}
+
+.title-page {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    left: 700px;
+    bottom: 600px;
+}
+
+/* Termina coach */
+
+#bar-chart {
+    outline: 1px solid black;
+    width: 600px;
+    height: 700px;
+    position: relative;
+    left: 400px;
+    bottom: 750px;
+}
+
+.title-page {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    left: 700px;
+    bottom: 600px;
+}
