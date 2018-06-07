@@ -1,15 +1,20 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* position: relative; */
     box-sizing: content-box;
     margin: 0;
     padding: 0;
     background-image: url("../assets/backgrounds/3132.jpg");
-    background-size: 100% 70%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-
 }
-/* Inicia Estilos del Header */
-header {
 
+/* Inicia Estilos del Header */
+
+header {
     width: 100%;
     height: 40px;
     background-color: rgb(249, 246, 237);
@@ -25,7 +30,6 @@ header img {
 }
 
 .header-search {
-
     width: 30%;
     display: inline-block;
     height: 40px;
@@ -54,7 +58,6 @@ header img {
 }
 
 .header-line-style {
-
     background-color: rgb(251, 200, 82);
     width: 100%;
     height: 1.5%;
@@ -70,7 +73,7 @@ header img {
 nav {
     width: 8%;
     height: 595px;
-    background-color:  rgb(249, 246, 237, 0.7);
+    background-color: rgb(249, 246, 237, 0.7);
     position: relative;
     bottom: 8px;
 }
@@ -85,59 +88,20 @@ li img {
     opacity: 0.6;
 }
 
-li, a {
+li,
+a {
     text-decoration: none;
     list-style: none;
 }
 
-/* .container-nav {
-    border-bottom: 1px solid rgb(187, 188, 174, 0.5);
-
-} */
-
 /* Fin Estilos de la Barra de Navegacion Fija */
 
-/* Inicio Estilo Footer */
-
-footer {
-    outline: 1px solid black;
-    background-color:  rgb(28, 51, 71);
-    position: absolute;
-    width: 100%;
-    height:35vh;
-}
-
-.facebook{
-  display: inline-block;
-  margin: 3em;
-  position: relative;
-  text-decoration: none;
-  left: 20em;
-  border: 1.5px solid white;
-  color: white;
-  padding: 1%;
-  border-radius: 50%;
-}
-.facebook:hover{
-  background-color: white;
-
-}
-.copyright{
-  text-align: right;
-  color: white;
-
-}
-
-/* Fin Estilo Footer */
 
 /* Inicio Seccion Home */
+
 .main-home {
     display: block;
 }
-
-/* .home {
-    display: none;
-} */
 
 
 .home {
@@ -146,21 +110,24 @@ footer {
     position: relative;
     bottom: 37em;
     text-align: center;
+}
 
-}
 .home .main-misionContainer {
-    margin: 4em 0% 6em ;
+    margin: 4em 0% 6em;
 }
-.home .main-visionContainer{
-    margin: 0.25em 0% 6em ;
+
+.home .main-visionContainer {
+    margin: 0.25em 0% 6em;
 }
+
 /*Inicio de Quote*/
+
 blockquote {
     font-family: Georgia, serif;
     font-size: 25px;
     font-style: italic;
     width: 500px;
-    margin: 0.25em 0% 6em ;
+    margin: 0.25em 0% 6em;
     padding: 0.35em 40px;
     line-height: 1.45;
     position: relative;
@@ -190,11 +157,9 @@ blockquote cite:before {
     content: "\2014 \2009";
 }
 
-
 blockquote cite:before {
     content: "\2014 \2009";
 }
-
 
 .nav-menu-sedes {
     outline: 1px solid yellow;
@@ -210,7 +175,7 @@ blockquote cite:before {
     position: relative;
     width: 70px;
     text-align: center;
-    right:40px;
+    right: 40px;
 }
 
 .nav-menu-generation {
@@ -222,9 +187,8 @@ blockquote cite:before {
     bottom: 18px;
 }
 
-
 .main-sedes-container {
-    background-color:rgb(255, 157, 1);
+    background-color: rgb(255, 157, 1);
     width: 88%;
     height: 20%;
     position: relative;
@@ -233,10 +197,8 @@ blockquote cite:before {
     opacity: 0.7;
 }
 
-
-
 .main-sedes-list {
-    outline: 1px solid  rgb(255, 251, 178);
+    outline: 1px solid rgb(255, 251, 178);
     text-align: center;
     position: relative;
     width: 100px;
@@ -245,7 +207,7 @@ blockquote cite:before {
 }
 
 .main-sedes-list a:hover {
-  color: white;
+    color: white;
 }
 
 .main-sede-AQP-container {
@@ -253,40 +215,35 @@ blockquote cite:before {
     left: 100px;
 }
 
-.main-sede-CDMX-container {
+.main-sede-CDMX-container {}
 
-}
+main-sede-LIM-container {}
 
-main-sede-LIM-container {
-
-}
-
-main-sede-SCL-container {
-
-}
+main-sede-SCL-container {}
 
 .main-container-generations {
     position: relative;
     width: 100%;
     left: 100px;
     bottom: 72px;
-}
-
     text-decoration: none;
 }
+
 .main-sedes-list a:hover {
     background-color: beige;
 }
+
 .main-sede-AQP-container {
     position: relative;
     left: 100px;
 }
-.main-sede-CDMX-container {
-}
-main-sede-LIM-container {
-}
-main-sede-SCL-container {
-}
+
+.main-sede-CDMX-container {}
+
+main-sede-LIM-container {}
+
+main-sede-SCL-container {}
+
 .main-container-generations {
     position: relative;
     width: 100%;
@@ -296,3 +253,36 @@ main-sede-SCL-container {
 
 /* Termina coach */
 
+/* Inicio Estilo Footer */
+
+footer {
+    outline: 1px solid black;
+    background-color: rgb(28, 51, 71);
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    display: inline-block;
+}
+
+.facebook {
+    display: inline-block;
+    margin: 3em;
+    position: relative;
+    text-decoration: none;
+    left: 20em;
+    border: 1.5px solid white;
+    color: white;
+    padding: 1%;
+    border-radius: 50%;
+}
+
+.facebook:hover {
+    background-color: white;
+}
+
+.copyright {
+    text-align: center;
+    color: white;
+}
+
+/* Fin Estilo Footer */

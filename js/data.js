@@ -5133,18 +5133,3 @@ var data = {
 };
 
 
-var dataAQP = 'AQP';      
-var AQP = '2016-2';
-
-function desertionName(base){
-    var dataAQP20162 = data[dataAQP][AQP]['students'];
-    var nameDesertion = [];
-
-for (var i = 0; i < dataAQP20162.length; i++) {
-    if (dataAQP20162[i].active == false){
-        nameDesertion.push("<li>" + dataAQP20162[i].name + "</li>");
-    }
-}
-// console.log(nameDesertion);
-document.getElementById("students-desertion-name-SCL2016").innerHTML = nameDesertion;
-}

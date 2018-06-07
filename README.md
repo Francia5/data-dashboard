@@ -73,11 +73,25 @@ Creación de herramienta web que ayude a las Training Managers de Laboratoria a 
 
     - EXTRA : agregar notas, seccion de HSE, mostrar graficas de la evolucion de las alumnas por generacion durante el proceso del bootcamp por quiz, por retos de codigo, trabajo en equipo, y todas las areas a evaluar para asi detectar las areas de oportunidad para los jedi.
 
-    DEFINICION
+## CONCLUSION DEL EQUIPO SOBRE LAS ENTREVISTAS
+
+   La importancia de nuestro cliente por la eficiencia de su tiempo es nuestro cometido durante el desarrollo de esta herramienta, al igual que la simplicidad al mostrar la data con una interfaz intuitiva basada en la filosofia de LABORATORIA y guiandonos por el branding de la marca.
+
+   La TM´s son las que tienen mayor contacto y necesidad sobre esta Herramienta pero eso no quita que pueda haber mas usuarios de otras areas haciendo uso de la misma, por ello es importante ser conciso y así poder mostrar de una manera simple y sencilla la Data de las estudiantes, Jedis y coaches.
+
+## DEFINICION
 
     - Consideramos  que debido a la falta de tiempo y organizacion no se ha podido contar con una herramienta que conjugue la informacion de todas las partes involucradas y gracias a la necesidad y a la demanda de mas sedes y por ende mas alumnas ha sido forzoso obtener una herramienta que pueda solucionar la problematica para cada una de las areas como son las TM en primer caso, los jedi y los coach.
 
 
+    HIPOTESIS
+
+   Gracias a la información obtenida en las entrevistas realizadas a las TM's de Laboratoria nuestro equipo llego a la conclusión de crear una herramienta donde se almacene toda la data de las estudiantes al igual que porcentajes y calificaciones del equipo de formación el tener que acceder a tantas plataformas para obtener estos datos ha sido un dolor que acompaña a diario el trabajo de las TM's y perjudica su desempeño global por eso esta herramienta al simplificar su búsqueda podría llegar a impactar de manera positiva todas las áreas incluso a las estudiantes y mejorar su experiencia en Laboratoria.
+
+   Mediante una herramienta de facil acceso, permitir al usuario observar la data de las estudiantes de Laboratoria almacenandola en tres prestañas laterales a las cuales el usuario podrá acceder a ellas en cualquier momento para navegar de una manera mas facil entre paginas. Posteriormente mostrar la información de cada una de ellas con una pequeña descripcion de su sprint y calificacion de HSE y Tech, en otra de las pestañas podremos ver las graficas de los coaches y jedis para ver sus porcentajes de cada sprint por sede y generación y por ultimo la pestaña de las gráficas donde podremos ver a gran escala el alcance de los datos de Laboratoria.
+   Al almacenar toda la información de las estudiantes será mas facil para las TM´s dar feedback en tiempo y forma y así dirigir todo este talento femenino a lograr sus objetivos.
+
+    
     BRAINSTORMING (Ideacion) DE LA PROBLEMATICA
 
     - Pagina Intuitiva con diseños simple

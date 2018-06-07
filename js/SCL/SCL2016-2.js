@@ -180,7 +180,7 @@ var text3 = '';
 // 1
 for(var i = 0; i < data.SCL['2016-2'].ratings.length; i++){
     satisfied = data.SCL['2016-2'].ratings[i].student.cumple + data.SCL['2016-2'].ratings[i].student.supera;
-    text = "El porcentaje de estudiantes satisfechas en el Sprint " + " fue de " + satisfied;
+    text = "El porcentaje de estudiantes satisfechas en el Sprint " + " fue de %" + satisfied;
 };
 document.getElementById('Text').innerHTML = text;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
