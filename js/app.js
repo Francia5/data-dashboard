@@ -1,29 +1,24 @@
+console.log("app");
 console.log(data);
-// Botones barra de Navegacion //
-var btnHome = document.getElementById("home-btn");
-var btnStudents = document.getElementById("students-btn");
-var btnCoach = document.getElementById("coach-btn");
-var btnChart = document.getElementById("chart-btn");
 
-// Seccion Home //
-var sectionHome = document.getElementsByClassName("home");
 
-// Seccion Students //
-var sectionStudents = document.getElementsByClassName("students");
+function coach(data) {
+    var coachnumber = data;
+    return coachnumber;
+};
+var i = 0;
+var coachCalif = data.AQP["2016-2"].ratings["1"].teacher; // cambiando esta parte de la data data.SCL["2017-2"]; la formula serviría para todas las sedes, no se integraron las demas por falta de tiempo
+coachCalif = coach(coachCalif);
+console.log("calificacion del coach de AQP 2016 II es" + " " + coachCalif); //menos 2 poque hay un 2 arrays vacío
 
-// Seccion Coach //
-var sectionCoach = document.getElementsByClassName("coach");
-
-//Seccion Charts //
-var sectionChart = document.getElementsByClassName("chart");
-
-btnHome.addEventListener("click", showHome);
-
-var showHome = function() {
-    btnHome.style.display = "none";
-    sectionCoach.style.display = "block";
+var coachAQP = "";
+for(i ; i < data.AQP["2016-2"].ratings[i].teacher.length; ++i){
+    coachAQP += "<li>" + ("calificacion del coach de AQP 2016 II es" + " " + (coachCalif)); + "</li>";
+    document.getElementById("main-coach-AQP").innerHTML = coachAQP;
 }
 
+
+////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////7
 // section coach
@@ -54,7 +49,11 @@ console.log("calificacion del jedi de AQP 2016 II es" + " " + jediCalif);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////7
 
-
-
-
+function jedi(data) {
+    var jediNumber = data;
+    return jediNumber;
+};
+var jediCalif = data.AQP["2016-2"].ratings["1"].jedi; // cambiando esta parte de la data data.SCL["2017-2"]; la formula serviría para todas las sedes, no se integraron las demas por falta de tiempo
+jediCalif = jedi(jediCalif);
+console.log("calificacion del jedi de AQP 2016 II es" + " " + jediCalif); 
 
